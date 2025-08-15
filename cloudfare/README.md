@@ -8,8 +8,8 @@ Supports secure access via access keys and integrates easily with Snowflake for 
 
 1. [Sign up](https://dash.cloudflare.com/sign-up) to create your account.
 
-2. Create your **domain**.
-![Create Domain](https://github.com/aldoruizw/codelab/raw/main/cloudfare/Create_domain.png)
+2. Go to **R2 Object Storage** and add your payment information.
+![R2 Object Storage](https://github.com/aldoruizw/codelab/blob/main/cloudfare/R2_Object_Storage.png)
 
 
 
