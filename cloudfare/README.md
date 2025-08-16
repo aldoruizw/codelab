@@ -9,56 +9,35 @@ Supports secure access via access keys and integrates easily with Snowflake for 
 1. [Sign up](https://dash.cloudflare.com/sign-up) to create your account.
 
 2. Go to **R2 Object Storage** and add your payment information.
-![R2 Object Storage](https://github.com/aldoruizw/codelab/blob/main/cloudfare/R2_Object_Storage.png)
+![img02](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img02.png)
 
+3. Select **+ Create bucket**.
+![img03](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img03.png)
 
+4. Add a **bucket name** and select **Create Bucket**.
+![img04](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img04.png)
 
+5. Go back to **R2 Object Storage** and select **{} API** and then **Manage API tokens**.
+![img05](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img05.png)
 
-4. **Get the admin password**
-You can get the password by checking the container logs using Portainer or by running the command:
+6. Select **Create Account API token**.
+![img06](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img06.png)
+
+7. Set the parameters according to your needs and select **Create Account API token**.
+![img07](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img07.png)
+
+8. You will get the **Secret Access Key** and **Access Key ID** to create an external stage in Snowflake.
+![img08](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img08.png)
+
+9. You can create a stage in Snowflake.
 ```bash
-docker logs filebrowser
+CREATE STAGE ANALYTICS.PUBLIC.STAGE_R2
+    URL = ' s3compat://yourbucket/'
+    ENDPOINT = 'ABCD.r2.cloudflarestorage.com'
+    CREDENTIALS = ( AWS_KEY_ID = 'yourkeyid'
+                    AWS_SECRET_KEY = 'yoursecretkey');
 ```
-You should see output like this with the randomly generated admin password:
-```log
-2025/07/26 19:06:43 Warning: filebrowser.db can't be found. Initializing in /database/
-2025/07/26 19:06:43 Using database: /database/filebrowser.db
-2025/07/26 19:06:43 Using config file: /config/settings.json
-2025/07/26 19:06:43 Randomly generated password for user 'admin': x9rMR7iz-QEQEqSS
-2025/07/26 19:06:43 Listening on [::]:80
-```
-
-4. **Access FileBrowser**
-Open your browser and go to:
-```
-http://<your-raspberry-pi-ip>:30080
-```
-Default login credentials:
-- **Username**: `admin`
-- **Password**: `x9rMR7iz-QEQEqSS (the generated password from logs)`
-
-_Remember to change your password after the first login!_
-
-## 📁 File Mounts
-
-| Host Path     | Container Path | Description           |
-|---------------|----------------|-----------------------|
-| `/home/pi`    | `/srv/home`    | Access Pi home folder |
-| `/media/sda1` | `/srv/usb`     | Access external disk  |
-
-## 🛠 Tips
-
-- If port `30080` is restricted or in use, select another available port
-- Add more folders by modifying the `volumes` section in the compose file
-- Use the volumes (`/database` and `/config`) to persist your settings
 
 ---
 
 ©️ Powered by [Cloudfare](https://www.cloudflare.com/)
-
----
-
-([https://dash.cloudflare.com/sign-up])
-```bash
-sudo chown -R pi:pi /media/sda1
-```
