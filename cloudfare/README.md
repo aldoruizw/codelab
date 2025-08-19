@@ -9,25 +9,25 @@ Supports secure access via access keys and integrates easily with Snowflake for 
 1. [Sign up](https://dash.cloudflare.com/sign-up) to create your account.
 
 2. Go to **R2 Object Storage** and add your payment information.
-![img02](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img02.png)
+![img02](https://github.com/aldoruizw/codelab/blob/main/Cloudfare/img/img02.png)
 
 3. Select **+ Create bucket**.
-![img03](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img03.png)
+![img03](https://github.com/aldoruizw/codelab/blob/main/Cloudfare/img/img03.png)
 
 4. Add a **bucket name** and select **Create Bucket**.
-![img04](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img04.png)
+![img04](https://github.com/aldoruizw/codelab/blob/main/Cloudfare/img/img04.png)
 
 5. Go back to **R2 Object Storage** and select **{} API** and then **Manage API tokens**.
-![img05](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img05.png)
+![img05](https://github.com/aldoruizw/codelab/blob/main/Cloudfare/img/img05.png)
 
 6. Select **Create Account API token**.
-![img06](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img06.png)
+![img06](https://github.com/aldoruizw/codelab/blob/main/Cloudfare/img/img06.png)
 
 7. Set the parameters according to your needs and select **Create Account API token**.
-![img07](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img07.png)
+![img07](https://github.com/aldoruizw/codelab/blob/main/Cloudfare/img/img07.png)
 
 8. You will get the **Secret Access Key** and **Access Key ID** to create an external stage in Snowflake.
-![img08](https://github.com/aldoruizw/codelab/blob/main/cloudfare/img08.png)
+![img08](https://github.com/aldoruizw/codelab/blob/main/Cloudfare/img/img08.png)
 
 9. You can create a stage in Snowflake.
 ```bash
