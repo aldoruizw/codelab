@@ -19,7 +19,7 @@ Key Vault is used to securely store and manage secrets, keys, and certificates.
    - **Key Vault Name**: Must be globally unique.
    - **Region**: Choose the region closest to you.
    - **Pricing Tier**: Standard (default).
-4. Click **Review + Create** → **Create**.
+4. Click **Review + Create** → **Create**.![img01](./img/Create_Key_Vault_img01.png)![img02](./img/Create_Key_Vault_img02.png)
 5. Once deployed, open the Key Vault and note its **Vault URI** (you’ll use this in apps).
 
 ---
