@@ -5,6 +5,15 @@ Key Vault is used to securely store and manage secrets, keys, and certificates.
 
 ---
 
+## 🔑 Why Use Azure Key Vault?
+
+- Keeps secrets **out of source control** (no passwords in GitHub).
+- Provides **RBAC access control** and **audit logs**.
+- Supports **automatic rotation** of secrets and certificates.
+- Integrates with **Azure services** and **GitHub Actions** for CI/CD.
+
+---
+
 ## 📋 Prerequisites
 - An active [Azure subscription](https://azure.microsoft.com/free/).
 
@@ -38,10 +47,11 @@ Key Vault is used to securely store and manage secrets, keys, and certificates.
       ![img08](./img/Create_Key_Vault_img08.png)
       ![img09](./img/Create_Key_Vault_img09.png)
 9. Create a secret
-   1. Go to **Objects** -> **Secrets**.
-   2. Select **+ Generate/Import**.
-   3. Add a **Name** and **Secret value**, then select **Create**.
-10. 
+   1. Go to **Objects** -> **Secrets** and select **+ Generate/Import**.
+      ![img10](./img/Create_Key_Vault_img10.png)
+   2. Add a **Name** and **Secret value**, then select **Create**.
+      
+      ![img11](./img/Create_Key_Vault_img11.png)
 
 ---
 
