@@ -12,8 +12,10 @@ This guide explains how to create a **Virtual Machine** using **Azure Portal**.
 ## Create Virtual Machine in Azure Portal
 1. Go to the [Azure Portal](https://portal.azure.com/).
 2. In the search bar, search for **Virtual Machines**.
-3. Select **Create** and then **Virtual Machine**
+3. Select **Create** and then **Virtual Machine**.
+   
    ![img01](./img/Create_VM_docker_sqlserver_img01.png)
+   
 
 
 ---
